@@ -1588,7 +1588,7 @@ void Misc::spectatorList() noexcept
 
     ImGui::End();
 }
-
+// End
 static void drawCrosshair(ImDrawList* drawList, const ImVec2& pos, ImU32 color) noexcept
 {
     // dot

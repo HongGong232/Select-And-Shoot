@@ -30,6 +30,7 @@ static bool gotMatrixFakelag{ false };
 static bool gotMatrixReal{ false };
 static Vector viewangles{};
 static Vector correctAngle{};
+static Vector sentViewangles{};
 static int buildTransformsIndex = -1;
 static std::array<AnimationLayer, 13> staticLayers{};
 static std::array<AnimationLayer, 13> layers{};
@@ -126,6 +127,9 @@ void Animations::update(UserCmd* cmd, bool& _sendPacket) noexcept
     localPlayer->updateClientSideAnimation();
 
     std::memcpy(&layers, localPlayer->animOverlays(), sizeof(AnimationLayer) * localPlayer->getAnimationLayersCount());
+
+    if (sendPacket)
+        sentViewangles = cmd->viewangles;
 
     if (sendPacket)
     {
@@ -671,7 +675,7 @@ int& Animations::buildTransformationsIndex() noexcept
 
 Vector* Animations::getCorrectAngle() noexcept
 {
-    return &correctAngle;
+    return &sentViewangles;
 }
 
 Vector* Animations::getViewAngles() noexcept
