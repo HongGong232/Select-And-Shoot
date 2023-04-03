@@ -134,13 +134,7 @@
     <ClCompile Include="MinHook\trampoline.c">
       <Filter>MinHook</Filter>
     </ClCompile>
-    <ClCompile Include="Hooks\VmtSwap.cpp">
-      <Filter>Hooks</Filter>
-    </ClCompile>
     <ClCompile Include="Hooks\MinHook.cpp">
-      <Filter>Hooks</Filter>
-    </ClCompile>
-    <ClCompile Include="Hooks\VmtHook.cpp">
       <Filter>Hooks</Filter>
     </ClCompile>
     <ClCompile Include="SDK\Utils.cpp">
@@ -523,13 +517,7 @@
     <ClInclude Include="MinHook\buffer.h">
       <Filter>MinHook</Filter>
     </ClInclude>
-    <ClInclude Include="Hooks\VmtSwap.h">
-      <Filter>Hooks</Filter>
-    </ClInclude>
     <ClInclude Include="Hooks\MinHook.h">
-      <Filter>Hooks</Filter>
-    </ClInclude>
-    <ClInclude Include="Hooks\VmtHook.h">
       <Filter>Hooks</Filter>
     </ClInclude>
     <ClInclude Include="SDK\Sound.h">
